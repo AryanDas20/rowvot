@@ -2,54 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Latest compiled and minified CSS
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> --> -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css" >
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+      body{
+        margin:0%;
+        padding:0%;
+      }
+      ::-webkit-scrollbar {
+  width: 20px;
+  background-color: rgb(255, 0, 255);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius:300px;
+  background: rgb(238,227,174);
+background: radial-gradient(circle, rgba(238,227,174,1) 0%, rgba(255,127,0,1) 100%);
+border-color:black;
+border:2px solid black;
+background-color: purple;
+
+}
+
+      #nav{
+        width:100%;
+        color:white;
+        background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        font-size:40px;
+        position:fixed;
+        margin-top:0%;
+        padding-top: 0%;
+        display: block;
+       
+        
+      }
+      #maintxt{
+        color:orange;
+        font-weight:bold;
+        text-decoration: none;
+        
+      }
+      #blankm{
+          background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+padding:200px;
+border-bottom:20px solid black;
+      }
+      .progress-container {
+  width: 100%;
+  height: 8px;
+  background: rgb(255, 174, 0);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #db35db;
+  width: 0%;
+
+}
+#loadbar{
+  position:fixed;
+}
+#h1id{
+  text-align:center;
+  font-family:monospace;
+}
+    </style>
 </head>
 <body>
-    <h1>CHOOSE THEMES</h1>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
+
+  <div id="nav"><nav><a id="maintxt">ROWVOT CSS</a></nav>  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  </div>
+
+  <div id="blankm"></div>
+<h1 id="h1id">THEMES (choose your themes)</h1>
+
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="button-btnoutline-yellow">hi</button>
+
+ 
   <script
   >$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
   $('#myModal').modal(options)
   </script>
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
 </body>
 </html>
