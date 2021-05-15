@@ -26,6 +26,24 @@
     <style>
 
 @media (min-width:1200px){
+  #qol{
+    text-decoration: none;
+    color:white;
+    padding:120px;
+  }
+  .container{
+    display:flex;
+  }
+  .container ,.container-1,.container-2{
+
+    padding:10px;
+  }
+  .container-1{
+    flex:1;
+  }
+  .container-2{
+    flex:1;
+  }
   body{
         margin:0%;
         padding:0%;
@@ -126,7 +144,8 @@ border-bottom:20px solid black;
   width: 400px;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background: rgb(157,0,255);
+background: radial-gradient(circle, rgba(157,0,255,1) 0%, rgba(192,0,255,1) 28%, rgba(255,93,0,1) 100%);
 }
 .box-1t{
   position: relative;
@@ -174,8 +193,18 @@ border-bottom:20px solid black;
   margin-bottom: 0%;
   padding-bottom: 0%;
 }
+#theme1d{
+  text-decoration: none;
+  color:black;
+  font-family:monospace;
+}
 }
 @media (min-width: 992px) and (max-width: 1199px){
+  #qol{
+    text-decoration: none;
+    color:white;
+    padding:120px;
+  }
   body{
         margin:0%;
         padding:0%;
@@ -277,7 +306,8 @@ border-bottom:20px solid black;
   width: 400px;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background: rgb(157,0,255);
+background: radial-gradient(circle, rgba(157,0,255,1) 0%, rgba(192,0,255,1) 28%, rgba(255,93,0,1) 100%);
 }
 .box-1t{
   position: relative;
@@ -326,6 +356,11 @@ border-bottom:20px solid black;
 }
 }
 @media (min-width: 412px) and (max-width: 990px){
+  #qol{
+    text-decoration: none;
+    color:white;
+    padding:120px;
+  }
   body{
         margin:0%;
         padding:0%;
@@ -450,7 +485,8 @@ border-bottom:20px solid black;
   width: 400px;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background: rgb(157,0,255);
+background: radial-gradient(circle, rgba(157,0,255,1) 0%, rgba(192,0,255,1) 28%, rgba(255,93,0,1) 100%);
 }
 .box-1t{
   position: relative;
@@ -474,6 +510,11 @@ border-bottom:20px solid black;
 }
 }
 @media (min-width: 300px) and (max-width: 410px){
+  #qol{
+    text-decoration: none;
+    color:white;
+    padding:120px;
+  }
   body{
         margin:0%;
         padding:0%;
@@ -601,7 +642,8 @@ border-bottom:20px solid black;
   width: 400px;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background: rgb(157,0,255);
+background: radial-gradient(circle, rgba(157,0,255,1) 0%, rgba(192,0,255,1) 28%, rgba(255,93,0,1) 100%);
 }
 .box-1t{
   position: relative;
@@ -635,35 +677,42 @@ border-bottom:20px solid black;
 
   <div id="blankm"></div>
 <h1 id="h1id">THEMES (choose your themes)</h1>
-
+<div class="container">
 <div class="container-1">
 
   <div class="box-1">
     <p id="boxt">THEME 1</p>
     <br>
     <div class="box-1t">
+      <div id="theme1d">
    <img class="images1e" src="static/theme1.png" width="400px";>
+   <a></a>
+   </div>
+  
     <div class="overlay">
-      <div class="text">Hello World</div>
+      <div class="text"><a id="qol" href="theme1e.html">Click this text to open theme 1</a></div>
     </div>
+   
   </div>
+ 
+ 
   </div>
   <a href="theme1e.html">CLICK TO OPEN</a>
 </div>
-  
+  <div class="container-2"></div>
 <div class="box-2">
   <p id="boxt2">THEME 1</p>
   <br>
   <div class="box-2t">
  <img class="images1e" src="static/theme1.png" width="400px";>
   <div class="overlay">
-    <div class="text">Hello World</div>
+    <div class="text"><a id="qol" href="theme1e.html">Click this text to open theme 1</a></div>
   </div>
 </div>
 </div>
 <a href="theme1e.html">CLICK TO OPEN</a>
 </div>
-
+</div>
  
   <script
   >$('#myModal').on('shown.bs.modal', function () {
