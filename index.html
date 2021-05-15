@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for disable the zoom -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jquery -->
@@ -18,7 +21,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
-      body{
+
+@media (min-width:1200px){
+  body{
         margin:0%;
         padding:0%;
       }
@@ -54,7 +59,331 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
         margin-top:0%;
         padding-top: 0%;
         display: block;
-       
+       z-index:100;
+        
+      }
+      #maintxt{
+        color:orange;
+        font-weight:bold;
+        text-decoration: none;
+        
+      }
+      #blankm{
+          background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+padding:200px;
+border-bottom:20px solid black;
+      }
+      .progress-container {
+  width: 100%;
+  height: 8px;
+  background: rgb(255, 174, 0);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #db35db;
+  width: 0%;
+
+}
+#loadbar{
+  position:fixed;
+}
+#h1id{
+  text-align:center;
+  font-family:monospace;
+}
+.container-1{
+  margin:10px;
+}
+.box-1{
+  z-index:0;
+  /* display:flex;
+  order:1; */
+  font-family:monospace;
+  text-decoration: none;
+  font-size:40px;
+  
+}
+#boxt{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.image1e{
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  width: 400px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.box-1t{
+  position: relative;
+  
+}
+.box-1t:hover .overlay {
+  opacity: 1;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.box-2{
+ 
+ /* display:flex;
+ order:1; */
+ font-family:monospace;
+ text-decoration: none;
+ font-size:40px;
+ margin:10px;
+ 
+}
+#box2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.box-2t{
+  position: relative;
+  
+}
+.box-2t:hover .overlay {
+  opacity: 1;
+
+}
+#boxt2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  body{
+        margin:0%;
+        padding:0%;
+      }
+      ::-webkit-scrollbar {
+  width: 20px;
+  background-color: rgb(255, 0, 255);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius:300px;
+  background: rgb(238,227,174);
+background: radial-gradient(circle, rgba(238,227,174,1) 0%, rgba(255,127,0,1) 100%);
+border-color:black;
+border:2px solid black;
+background-color: purple;
+
+}
+
+      #nav{
+        width:100%;
+        color:white;
+        background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        font-size:40px;
+        position:fixed;
+        margin-top:0%;
+        padding-top: 0%;
+        display: block;
+        z-index:100;
+        
+      }
+      #maintxt{
+        color:orange;
+        font-weight:bold;
+        text-decoration: none;
+        
+      }
+      #blankm{
+          background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+padding:200px;
+border-bottom:20px solid black;
+      }
+      .progress-container {
+  width: 100%;
+  height: 8px;
+  background: rgb(255, 174, 0);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #db35db;
+  width: 0%;
+
+}
+#loadbar{
+  position:fixed;
+}
+#h1id{
+  text-align:center;
+  font-family:monospace;
+}
+.container-1{
+  margin:10px;
+}
+.box-1{
+  
+  /* display:flex;
+  order:1; */
+  font-family:monospace;
+  text-decoration: none;
+  font-size:40px;
+  margin:10px;
+  
+}
+#boxt{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.image1e{
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  width: 400px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.box-1t{
+  position: relative;
+  
+}
+.box-1t:hover .overlay {
+  opacity: 1;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.box-2{
+ 
+ /* display:flex;
+ order:1; */
+ font-family:monospace;
+ text-decoration: none;
+ font-size:40px;
+ 
+}
+#box2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.box-2t{
+  position: relative;
+  
+}
+.box-2t:hover .overlay {
+  opacity: 1;
+
+}
+#boxt2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+}
+@media (min-width: 412px) and (max-width: 990px){
+  body{
+        margin:0%;
+        padding:0%;
+      }
+      ::-webkit-scrollbar {
+  width: 20px;
+  background-color: rgb(255, 0, 255);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius:300px;
+  background: rgb(238,227,174);
+background: radial-gradient(circle, rgba(238,227,174,1) 0%, rgba(255,127,0,1) 100%);
+border-color:black;
+border:2px solid black;
+background-color: purple;
+
+}
+.box-2{
+ 
+ /* display:flex;
+ order:1; */
+ font-family:monospace;
+ text-decoration: none;
+ font-size:40px;
+ 
+}
+#box2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.box-2t{
+  position: relative;
+  
+}
+.box-2t:hover .overlay {
+  opacity: 1;
+
+}
+#boxt2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+      #nav{
+        width:100%;
+        color:white;
+        background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        font-size:40px;
+        position:fixed;
+        margin-top:0%;
+        padding-top: 0%;
+        display: block;
+        z-index:100;
         
       }
       #maintxt{
@@ -105,6 +434,193 @@ border-bottom:20px solid black;
   margin-bottom: 0%;
   padding-bottom: 0%;
 }
+.image1e{
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  width: 400px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.box-1t{
+  position: relative;
+  
+}
+.box-1t:hover .overlay {
+  opacity: 1;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+}
+@media (min-width: 300px) and (max-width: 410px){
+  body{
+        margin:0%;
+        padding:0%;
+      }
+      ::-webkit-scrollbar {
+  width: 100%;
+  background-color: rgb(255, 0, 255);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius:300px;
+  background: rgb(238,227,174);
+background: radial-gradient(circle, rgba(238,227,174,1) 0%, rgba(255,127,0,1) 100%);
+border-color:black;
+border:2px solid black;
+background-color: purple;
+
+}
+
+      #nav{
+        width:100%;
+        color:white;
+        background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        font-size:40px;
+        position:fixed;
+        margin-top:0%;
+        padding-top: 0%;
+        display: block;
+        z-index:100;
+        
+      }
+      #maintxt{
+        color:orange;
+        font-weight:bold;
+        text-decoration: none;
+        
+      }
+      #blankm{
+          background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+padding:200px;
+border-bottom:20px solid black;
+      }
+      .progress-container {
+  width: 100%;
+  height: 8px;
+  background: rgb(255, 174, 0);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #db35db;
+  width: 0%;
+
+}
+#loadbar{
+  position:fixed;
+}
+#h1id{
+  text-align:center;
+  font-family:monospace;
+  font-size: 20px;
+}
+.container-1{
+  margin:0px;
+}
+.box-1{
+ 
+  /* display:flex;
+  order:1; */
+  font-family:monospace;
+  text-decoration: none;
+  font-size:40px;
+  
+}
+.box-2{
+ 
+ /* display:flex;
+ order:1; */
+ font-family:monospace;
+ text-decoration: none;
+ font-size:40px;
+ 
+}
+#box2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.box-2t{
+  position: relative;
+  
+}
+.box-2t:hover .overlay {
+  opacity: 1;
+
+}
+#boxt2{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+#boxt{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.image1e{
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  width: 400px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.box-1t{
+  position: relative;
+  
+}
+.box-1t:hover .overlay {
+  opacity: 1;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+}
 
     </style>
 </head>
@@ -122,11 +638,28 @@ border-bottom:20px solid black;
   <div class="box-1">
     <p id="boxt">THEME 1</p>
     <br>
-    <img src="static/theme1.png" width="400px";>
+    <div class="box-1t">
+   <img class="images1e" src="static/theme1.png" width="400px";>
+    <div class="overlay">
+      <div class="text">Hello World</div>
+    </div>
   </div>
-
+  </div>
+  <a href="theme1e.html">CLICK TO OPEN</a>
 </div>
   
+<div class="box-2">
+  <p id="boxt2">THEME 1</p>
+  <br>
+  <div class="box-2t">
+ <img class="images1e" src="static/theme1.png" width="400px";>
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+</div>
+<a href="theme1e.html">CLICK TO OPEN</a>
+</div>
 
  
   <script
